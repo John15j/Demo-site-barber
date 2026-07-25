@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment | a.cutzz_</title>
+<meta name="description" content="Book your appointment with Alan at a.cutzz_ in Indianapolis, IN — choose your service, date, and time in under a minute.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%23c8102e%22/><text x=%2250%25%22 y=%2262%25%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22>a</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+
+<div class="page-loader" id="pageLoader">
+  <div class="loader-mark"><span class="brand-mark">✂</span> a.cutzz_</div>
+</div>
+
+<header class="navbar scrolled" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">✂</span> a.cutzz_
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="index.html" class="btn btn-ghost btn-sm">← Back to site</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#services">Services</a>
+  <a href="index.html#gallery">Gallery</a>
+  <a href="index.html#reviews">Reviews</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="index.html" class="btn btn-primary">← Back to site</a>
+</div>
+
+<main class="booking-page">
+  <div class="container">
+    <div class="booking-head">
+      <p class="eyebrow">Book with Alan · a.cutzz_</p>
+      <h1>Reserve your seat in the chair</h1>
+      <p>Five quick steps. No account needed.</p>
+    </div>
+
+    <div class="stepper" id="stepper" style="--progress:0%">
+      <div class="step-dot active" data-step="1"><div class="circle">1</div><span class="label">Service</span></div>
+      <div class="step-dot" data-step="2"><div class="circle">2</div><span class="label">Date</span></div>
+      <div class="step-dot" data-step="3"><div class="circle">3</div><span class="label">Time</span></div>
+      <div class="step-dot" data-step="4"><div class="circle">4</div><span class="label">Details</span></div>
+      <div class="step-dot" data-step="5"><div class="circle">5</div><span class="label">Done</span></div>
+    </div>
+
+    <div class="booking-card">
+
+      <!-- STEP 1 : SERVICE -->
+      <section class="step-panel active" data-panel="1">
+        <h2>Choose your service</h2>
+        <p class="hint">Pick what you're coming in for today.</p>
+        <div class="select-services" id="serviceList">
+          <div class="select-card" data-service="haircut" data-price="65" data-duration="55 min" data-name="Haircut">
+            <div class="select-card-left">
+              <span class="select-card-icon">💈</span>
+              <div><div class="select-card-title">Haircut</div><div class="select-card-sub">55 min</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px">
+              <span class="select-card-price">$65</span>
+              <span class="select-radio"></span>
+            </div>
+          </div>
+          <div class="select-card" data-service="haircut-beard" data-price="75" data-duration="60 min" data-name="Haircut + Beard">
+            <div class="select-card-left">
+              <span class="select-card-icon">🪒</span>
+              <div><div class="select-card-title">Haircut + Beard</div><div class="select-card-sub">60 min</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px">
+              <span class="select-card-price">$75</span>
+              <span class="select-radio"></span>
+            </div>
+          </div>
+          <div class="select-card" data-service="haircut-design" data-price="65" data-duration="55 min" data-name="Haircut + Design">
+            <div class="select-card-left">
+              <span class="select-card-icon">💎</span>
+              <div><div class="select-card-title">Haircut + Design</div><div class="select-card-sub">55 min</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px">
+              <span class="select-card-price">$65</span>
+              <span class="select-radio"></span>
+            </div>
+          </div>
+          <div class="select-card" data-service="eyebrows" data-price="5" data-duration="5 min" data-name="Eyebrow Grooming">
+            <div class="select-card-left">
+              <span class="select-card-icon">✨</span>
+              <div><div class="select-card-title">Eyebrow Grooming</div><div class="select-card-sub">5 min</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px">
+              <span class="select-card-price">$5</span>
+              <span class="select-radio"></span>
+            </div>
+          </div>
+          <div class="select-card" data-service="kids" data-price="45" data-duration="40 min" data-name="Kids Haircut">
+            <div class="select-card-left">
+              <span class="select-card-icon">🧒</span>
+              <div><div class="select-card-title">Kids Haircut</div><div class="select-card-sub">40 min</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px">
+              <span class="select-card-price">$45</span>
+              <span class="select-radio"></span>
+            </div>
+          </div>
+        </div>
+        <div class="step-actions">
+          <span></span>
+          <button class="btn btn-primary" id="next1">Continue</button>
+        </div>
+      </section>
+
+      <!-- STEP 2 : DATE -->
+      <section class="step-panel" data-panel="2">
+        <h2>Choose a date</h2>
+        <p class="hint">Pick any available day — Alan's calendar updates in real time.</p>
+        <div class="calendar">
+          <div class="calendar-head">
+            <button class="cal-nav" id="calPrev" aria-label="Previous month">←</button>
+            <h3 id="calMonthLabel">Month Year</h3>
+            <button class="cal-nav" id="calNext" aria-label="Next month">→</button>
+          </div>
+          <div class="cal-grid" id="calGrid"></div>
+        </div>
+        <div class="step-actions">
+          <button class="btn btn-ghost" id="back2">Back</button>
+          <button class="btn btn-primary" id="next2">Continue</button>
+        </div>
+      </section>
+
+      <!-- STEP 3 : TIME -->
+      <section class="step-panel" data-panel="3">
+        <h2>Choose a time</h2>
+        <p class="hint" id="timeHint">Available slots for your selected date.</p>
+        <div class="time-grid" id="timeGrid"></div>
+        <div class="step-actions">
+          <button class="btn btn-ghost" id="back3">Back</button>
+          <button class="btn btn-primary" id="next3">Continue</button>
+        </div>
+      </section>
+
+      <!-- STEP 4 : CUSTOMER INFO -->
+      <section class="step-panel" data-panel="4">
+        <h2>Your details</h2>
+        <p class="hint">So Alan knows who's coming in.</p>
+        <div class="form-grid">
+          <div class="form-field full">
+            <label for="custName">Full name</label>
+            <input type="text" id="custName" placeholder="Jordan Smith" autocomplete="name">
+            <span class="field-error" id="errName"></span>
+          </div>
+          <div class="form-field">
+            <label for="custPhone">Phone number</label>
+            <input type="tel" id="custPhone" placeholder="(317) 555-0142" autocomplete="tel">
+            <span class="field-error" id="errPhone"></span>
+          </div>
+          <div class="form-field">
+            <label for="custEmail">Email</label>
+            <input type="email" id="custEmail" placeholder="jordan@email.com" autocomplete="email">
+            <span class="field-error" id="errEmail"></span>
+          </div>
+          <div class="form-field full">
+            <label for="custInsta">Instagram <span class="opt">(optional)</span></label>
+            <input type="text" id="custInsta" placeholder="@jordan.smith">
+          </div>
+        </div>
+
+        <div class="summary" id="summaryBox"></div>
+
+        <div class="step-actions">
+          <button class="btn btn-ghost" id="back4">Back</button>
+          <button class="btn btn-primary" id="next4">Confirm Booking</button>
+        </div>
+      </section>
+
+      <!-- STEP 5 : CONFIRMATION -->
+      <section class="step-panel" data-panel="5">
+        <div class="confirm-wrap">
+          <div class="confirm-check">
+            <svg viewBox="0 0 52 52">
+              <circle cx="26" cy="26" r="23"></circle>
+              <path d="M15 27 L23 35 L38 18"></path>
+            </svg>
+          </div>
+          <h2>You're booked, <span id="confirmName">friend</span>.</h2>
+          <p>A confirmation has been sent. See you at the chair.</p>
+          <div class="confirm-code" id="confirmCode">A.CUTZZ-000000</div>
+          <div class="summary" id="finalSummaryBox"></div>
+          <div class="confirm-actions" style="margin-top:26px">
+            <a href="index.html" class="btn btn-ghost">Back to home</a>
+            <button class="btn btn-primary" id="bookAnother">Book another</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer style="padding:40px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>© 2026 a.cutzz_. Demo concept — not a live business site.</span>
+    <span>Indianapolis, IN</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
